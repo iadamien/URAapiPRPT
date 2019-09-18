@@ -10,7 +10,7 @@ accesskey<-""
 tokenurl <- "https://www.ura.gov.sg/uraDataService/insertNewToken.action"
 get_token <- GET(tokenurl, add_headers(AccessKey = accesskey))
 get_token_text <- content(get_token,"text", encoding = "UTF-8")
-token <- strsplit(get_token_text, split = '["]')[[1]][4]
+token <- strsplit(get_token_text, split = '["]')[[1]][12]
 
 df_api = data.frame()
 
